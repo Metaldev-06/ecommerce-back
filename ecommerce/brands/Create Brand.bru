@@ -1,0 +1,17 @@
+meta {
+  name: Create Brand
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/brands
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Sony"
+  }
+}
