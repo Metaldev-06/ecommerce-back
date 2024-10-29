@@ -1,0 +1,19 @@
+meta {
+  name: Get One Category
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{URL}}/categories/5
+  body: none
+  auth: none
+}
+
+params:query {
+  ~limit: 10
+  ~offset: 0
+  ~order: asc
+  ~sort: id
+  ~term: Motorola
+}

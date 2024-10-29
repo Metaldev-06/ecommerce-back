@@ -1,0 +1,19 @@
+meta {
+  name: Get All Countries
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}/countries
+  body: none
+  auth: none
+}
+
+params:query {
+  ~limit: 10
+  ~offset: 0
+  ~order: asc
+  ~sort: id
+  ~term: Motorola
+}

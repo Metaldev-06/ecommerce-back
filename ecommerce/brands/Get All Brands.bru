@@ -5,7 +5,15 @@ meta {
 }
 
 get {
-  url: {{URL}}/brands
+  url: {{URL}}/brands?limit=10&offset=0&order=asc&sort=id
   body: none
   auth: none
+}
+
+params:query {
+  limit: 10
+  offset: 0
+  order: asc
+  sort: id
+  ~term: Motorola
 }

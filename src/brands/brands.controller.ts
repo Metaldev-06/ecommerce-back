@@ -8,9 +8,13 @@ import {
   Delete,
   ClassSerializerInterceptor,
   UseInterceptors,
+  Query,
+  ParseIntPipe,
 } from '@nestjs/common';
+
 import { BrandsService } from './brands.service';
 import { CreateBrandDto, UpdateBrandDto } from './dto';
+import { PaginationDto } from '@/common/dtos/pagination.dto';
 
 @Controller('brands')
 @UseInterceptors(ClassSerializerInterceptor)
@@ -23,22 +27,25 @@ export class BrandsController {
   }
 
   @Get()
-  findAll() {
-    return this.brandsService.findAll();
+  findAll(@Query() paginationDto: PaginationDto) {
+    return this.brandsService.findAll(paginationDto);
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id', ParseIntPipe) id: string) {
     return this.brandsService.findOne(+id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateBrandDto: UpdateBrandDto) {
+  update(
+    @Param('id', ParseIntPipe) id: string,
+    @Body() updateBrandDto: UpdateBrandDto,
+  ) {
     return this.brandsService.update(+id, updateBrandDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
+  remove(@Param('id', ParseIntPipe) id: string) {
     return this.brandsService.remove(+id);
   }
 }

@@ -1,0 +1,17 @@
+meta {
+  name: Update SubCategory
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}/subcategories/5
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "almacen"
+  }
+}

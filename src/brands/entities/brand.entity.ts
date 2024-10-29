@@ -1,9 +1,11 @@
+import { Product } from '@/products/entities/product.entity';
 import { Exclude } from 'class-transformer';
 import {
   Column,
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -18,6 +20,9 @@ export class Brand {
     nullable: false,
   })
   name: string;
+
+  @OneToMany(() => Product, (product) => product.brandId)
+  products: Product[];
 
   @DeleteDateColumn()
   @Exclude()

@@ -1,0 +1,23 @@
+meta {
+  name: Get All Products
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{URL}}/products
+  body: none
+  auth: none
+}
+
+params:query {
+  ~limit: 10
+  ~offset: 0
+  ~order: asc
+  ~sort: id
+  ~term: 
+  ~category: bebidas
+  ~subCategory: sin alcohol
+  ~brand: branca
+  ~country: argentina
+}

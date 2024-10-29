@@ -1,0 +1,17 @@
+meta {
+  name: Update Product
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{URL}}/products/6e146a0a-b665-41ea-954f-bcd1964a6f57
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Fernet"
+  }
+}

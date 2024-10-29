@@ -6,6 +6,8 @@ import { BrandsModule } from './brands/brands.module';
 import { ReviewsModule } from './reviews/reviews.module';
 import { CustomersModule } from './customers/customers.module';
 import { OrdersModule } from './orders/orders.module';
+import { SubCategoriesModule } from './sub-categories/sub-categories.module';
+import { CountriesModule } from './countries/countries.module';
 
 @Module({
   imports: [
@@ -21,6 +23,8 @@ import { OrdersModule } from './orders/orders.module';
     ReviewsModule,
     CustomersModule,
     OrdersModule,
+    SubCategoriesModule,
+    CountriesModule,
   ],
   controllers: [],
   providers: [],

@@ -1,0 +1,17 @@
+meta {
+  name: Create Country
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/countries
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": ""
+  }
+}

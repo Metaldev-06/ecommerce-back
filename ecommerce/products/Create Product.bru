@@ -1,0 +1,26 @@
+meta {
+  name: Create Product
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/products
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Yerba Mate Playadito 2",
+    "description": "Lorem ipsu asda ad asdas das da sdasf asgag",
+    "information": "replica",
+    "price": 500,
+    "stock": 10,
+    "image": "https://th.bing.com/th/id/OIP.00E8dZwL7RS9uQFHy5oBfAHaHa?rs=1&pid=ImgDetMain",
+    "brandId": 7,
+    "categoryId": 5,
+    "subCategoryId": 4,
+    "countryId": 1
+  }
+}
