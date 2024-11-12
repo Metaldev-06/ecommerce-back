@@ -42,10 +42,6 @@ export class CreateProductDto {
   @Transform(({ value }) => Number(value))
   stock: number;
 
-  @IsString()
-  @Transform(({ value }) => value.trim())
-  image: string;
-
   @IsNumber()
   // @IsOptional()
   @IsNotEmpty()

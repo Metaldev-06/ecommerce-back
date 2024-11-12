@@ -63,6 +63,7 @@ export class ProductsService {
       order,
       where,
       sort: sort as keyof Product,
+      relations: ['images'],
     });
   }
 

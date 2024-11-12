@@ -3,8 +3,8 @@ import { Category } from '@/categories/entities/category.entity';
 import { Country } from '@/countries/entities/country.entity';
 import { SubCategory } from '@/sub-categories/entities/sub-category.entity';
 import { Exclude } from 'class-transformer';
+import { Image } from '../../images/entities/image.entity';
 import {
-  AfterLoad,
   BeforeInsert,
   BeforeUpdate,
   Column,
@@ -12,6 +12,7 @@ import {
   DeleteDateColumn,
   Entity,
   ManyToOne,
+  OneToMany,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
@@ -52,11 +53,6 @@ export class Product {
   })
   stock: number;
 
-  @Column('text', {
-    nullable: false,
-  })
-  image: string;
-
   @ManyToOne(() => Brand, (brand) => brand.products, {
     eager: true,
     onDelete: 'CASCADE',
@@ -80,6 +76,11 @@ export class Product {
     onDelete: 'CASCADE',
   })
   countryId: Country;
+
+  @OneToMany(() => Image, (image) => image.product, {
+    cascade: true,
+  })
+  images: Image[];
 
   @DeleteDateColumn()
   @Exclude()

@@ -1,0 +1,15 @@
+meta {
+  name: Upload File
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{URL}}/files/upload
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  file: @file(/home/fernandodiaz/Imágenes/wallhaven-d679vl.png)
+}

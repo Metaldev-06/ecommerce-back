@@ -8,6 +8,9 @@ import { CustomersModule } from './customers/customers.module';
 import { OrdersModule } from './orders/orders.module';
 import { SubCategoriesModule } from './sub-categories/sub-categories.module';
 import { CountriesModule } from './countries/countries.module';
+import { ImagesModule } from './images/images.module';
+import { FilesModule } from './files/files.module';
+import { CloudinaryModule } from './cloudinary/cloudinary.module';
 
 @Module({
   imports: [
@@ -25,6 +28,9 @@ import { CountriesModule } from './countries/countries.module';
     OrdersModule,
     SubCategoriesModule,
     CountriesModule,
+    ImagesModule,
+    FilesModule,
+    CloudinaryModule,
   ],
   controllers: [],
   providers: [],
