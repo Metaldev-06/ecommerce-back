@@ -24,6 +24,11 @@ export class Country {
   @OneToMany(() => Product, (product) => product.countryId)
   products: Product[];
 
+  @Column('text', {
+    nullable: true,
+  })
+  image: string;
+
   @DeleteDateColumn()
   @Exclude()
   deletedAt: Date;
