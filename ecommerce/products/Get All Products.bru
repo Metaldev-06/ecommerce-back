@@ -5,19 +5,19 @@ meta {
 }
 
 get {
-  url: {{URL}}/products
+  url: {{URL}}/products?order=asc&sort=updatedAt
   body: none
   auth: none
 }
 
 params:query {
+  order: asc
+  sort: updatedAt
+  ~country: argentina
   ~limit: 10
-  ~offset: 0
-  ~order: asc
-  ~sort: id
+  ~offset: 1
   ~term: 
   ~category: bebidas
   ~subCategory: sin alcohol
   ~brand: branca
-  ~country: argentina
 }

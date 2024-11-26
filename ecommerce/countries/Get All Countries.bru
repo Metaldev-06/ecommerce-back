@@ -5,15 +5,15 @@ meta {
 }
 
 get {
-  url: {{URL}}/countries
+  url: {{URL}}/countries?limit=4&offset=0
   body: none
   auth: none
 }
 
 params:query {
-  ~limit: 10
-  ~offset: 0
+  limit: 4
+  offset: 0
+  ~term: argentina
   ~order: asc
   ~sort: id
-  ~term: Motorola
 }
