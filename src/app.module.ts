@@ -12,6 +12,7 @@ import { ImagesModule } from './images/images.module';
 import { FilesModule } from './files/files.module';
 import { CloudinaryModule } from './cloudinary/cloudinary.module';
 import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
+import { CountryBannerModule } from './country-banner/country-banner.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
     FilesModule,
     CloudinaryModule,
     ShoppingCartModule,
+    CountryBannerModule,
   ],
   controllers: [],
   providers: [],

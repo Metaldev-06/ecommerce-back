@@ -5,14 +5,14 @@ meta {
 }
 
 get {
-  url: {{URL}}/products?order=asc&sort=updatedAt
+  url: {{URL}}/products
   body: none
   auth: none
 }
 
 params:query {
-  order: asc
-  sort: updatedAt
+  ~order: desc
+  ~sort: stock
   ~country: argentina
   ~limit: 10
   ~offset: 1

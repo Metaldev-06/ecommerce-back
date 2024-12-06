@@ -36,6 +36,7 @@ export class CategoriesService {
       where: {
         name: term,
       },
+      relations: ['subCategories'],
     });
   }
 
